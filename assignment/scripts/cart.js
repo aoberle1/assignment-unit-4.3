@@ -13,6 +13,15 @@ function addItem ( item ){
     return true;
 }
 // Testing addItem function
-console.log( `Basket is ${ basket }` );
+addItem( 'Brie' )
+console.log( `Basket is: ${ basket }` );
+// Testing addItem function inside console log
 console.log( 'Adding Speck to basket (should be true):', addItem( 'Speck' ) );
 console.log( `Updated basket is: ${ basket }` );
+
+// 3.) Creating listItem function
+function listItem (){
+    for ( i = 0; i < (basket.length); i++ ){
+        
+    }
+}
