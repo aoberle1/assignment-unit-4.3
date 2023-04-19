@@ -8,5 +8,7 @@ let basket = [];
 
 // 2.) Creating function addItem with parameter item
 function addItem ( item ){
-    
+    console.log( 'In addItem', item );
+    basket.push( item );
+    return true;
 }
