@@ -13,8 +13,6 @@ function addItem ( item ){
     return true;
 }
 // Testing addItem function
-addItem( 'speck' );
-addItem( 'brie' );
-addItem( 'crackers' );
 console.log( `Basket is ${ basket }` );
-console.log( addItem () ); 
+console.log( 'Adding Speck to basket (should be true):', addItem( 'Speck' ) );
+console.log( `Updated basket is: ${ basket }` );
