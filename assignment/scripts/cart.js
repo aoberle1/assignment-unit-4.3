@@ -5,6 +5,8 @@ console.log('***** Cart Functions *****');
 
 // 1.) Creating variable basket
 let basket = [];
+// 5.) Creating maxItems constant
+const maxItems = 5;
 
 // 2.) Creating function addItem with parameter item
 function addItem ( item ){
@@ -22,8 +24,22 @@ console.log( `Updated basket is: ${ basket }` );
 
 // 3.) Creating listItem function
 function listItem () {
-    for ( i = 0; i < basket.length; i++ ){
-            return basket[i];
+        console.log( 'in listItem' );
+    for ( let i = 0; i <= (basket.length-1); i++ ){
+            console.log( `We added ${ basket[i] } to the basket!` );
     }
 }
-console.log( 'Added', listItem(), 'to the basket!' );
+listItem()
+
+
+// 4.) Emptying array function
+
+function empty(){
+    basket = [];
+    console.log( 'The basket is empty', basket )    
+}
+empty()
+
+function isFull(){
+    
+}
