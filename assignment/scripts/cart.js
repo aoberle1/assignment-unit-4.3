@@ -14,4 +14,7 @@ function addItem ( item ){
 }
 // Testing addItem function
 addItem( 'speck' );
+addItem( 'brie' );
+addItem( 'crackers' );
+console.log( `Basket is ${ basket }` );
 console.log( addItem () ); 
