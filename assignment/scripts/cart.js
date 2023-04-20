@@ -5,13 +5,11 @@ console.log('***** Cart Functions *****');
 
 // 1.) Creating variable basket
 let basket = [];
-// 5.) Creating maxItems constant
-// Tested changing maxItems to 2 to check if isFull returns appropriate true
+// Stretch 1.) Creating maxItems constant
 const maxItems = 5;
 
-// 2.) Creating function addItem with parameter item
+// 2.) Creating function addItem with parameter item - returns true when item added
 function addItem ( item ){
-    console.log( 'In addItem' );
     basket.push( item );
     return true;
 }
@@ -25,7 +23,6 @@ console.log( `Updated basket is: ${ basket }` );
 
 // 3.) Creating listItem function
 function listItem () {
-        console.log( 'in listItem' );
     for ( let i = 0; i <= (basket.length-1); i++ ){
             console.log( `We added ${ basket[i] } to the basket!` );
     }
@@ -33,9 +30,8 @@ function listItem () {
 // Testing listItem, logs each item in the basket appropriately
 listItem()
 
-// 6.) creating function for isFull before empty array function
+// Stretch 2.) creating function for isFull (before empty array function)
 function isFull(){
-        console.log( 'in isFull ');
     if ( maxItems <= basket.length ) {
         return true;
     }
@@ -44,6 +40,12 @@ function isFull(){
     }
 }
 console.log( 'The basket is full (expect false):', isFull() );
+// adding items to basket to test isFull
+addItem( 'Crackers');
+addItem( 'Cornichons' );
+addItem( 'Tiramisu' );
+listItem();
+console.log( 'The basket is full (expect true)', isFull() );
 
 
 // 4.) Emptying array function
