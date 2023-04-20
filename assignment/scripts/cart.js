@@ -40,7 +40,7 @@ function isFull(){
     }
 }
 console.log( 'The basket is full (expect false):', isFull() );
-// adding items to basket to test isFull
+// adding items to basket to test isFull for true
 addItem( 'Crackers');
 addItem( 'Cornichons' );
 addItem( 'Tiramisu' );
