@@ -10,8 +10,15 @@ const maxItems = 5;
 
 // 2.) Creating function addItem with parameter item - returns true when item added
 function addItem ( item ){
-    basket.push( item );
-    return true;
+    // isFull does not need to === true, boolean only has 2 outcomes
+    if ( isFull() ){
+        console.log( 'Item not added, basket is full!')
+        return false
+    }
+    else {
+        basket.push( item );
+        return true;
+    }
 }
 // Testing addItem function outside console log
 addItem( 'Brie' )
@@ -24,7 +31,7 @@ console.log( `Updated basket is: ${ basket }` );
 // 3.) Creating listItem function
 function listItem () {
     for ( let i = 0; i <= (basket.length-1); i++ ){
-            console.log( `We added ${ basket[i] } to the basket!` );
+            console.log( `We have ${ basket[i] } in the basket!` );
     }
 }
 // Testing listItem, logs each item in the basket appropriately
@@ -46,7 +53,8 @@ addItem( 'Cornichons' );
 addItem( 'Tiramisu' );
 listItem();
 console.log( 'The basket is full (expect true)', isFull() );
-
+addItem( 'Easy Cheez' );
+console.log( basket )
 
 // 4.) Emptying array function
 
