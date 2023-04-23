@@ -59,7 +59,7 @@ console.log( basket )
 // 4.) Emptying array function
 
 function empty(){
-    basket = [];
+    let basket = [];
     console.log( 'The basket is empty', basket )    
 }
 empty()
